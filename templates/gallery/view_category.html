@@ -1,0 +1,18 @@
+{% extends 'gallery/base.html' %}
+{% block head_title %}Viewing category {{ category.title }}{% endblock %}
+{% block title %}
+		{{ category.title }}
+{% endblock %}
+
+{% block content %}
+    {% if images %}
+        <ul>
+        {% for image in images %}
+            <li><a href="{{ image.get_absolute_url }}"></a></li>
+            <img src="{{ image.image }}"/>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no posts.</p>
+    {% endif %}
+{% endblock %}
