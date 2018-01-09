@@ -20,6 +20,7 @@ from home import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',views.home,name="home"),
+    url(r'^contact_us',views.contact_us,name="contact_us"),
     url(r'^gallery/',include('gallery.urls')),
     url(r'^events/', include('calendarium.urls')),
     url(r'^payment/',include('paypal.standard.ipn.urls')),
