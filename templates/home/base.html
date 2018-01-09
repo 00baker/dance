@@ -8,14 +8,22 @@
 <meta name='description' content='Learn Dance is the best institute to learn dance. We offer dance classes to People of all age group '/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{% static "style.css" %}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    <link href="{% static "lightbox.css" %}" rel="stylesheet">
+
 </head>
 <body>
-{% block content %} {% endblock %}
+<div id="landing">
+  <div class="header">
+    <a href="#" class="logo">Learn Dance</a>
+    <a href="#" class="button">Create Account</a>
+    <a href="#" class="login">Login</a>
+  </div>
+</div>
+{% block slider1 %} {% endblock %}
+{% block mid %}{% endblock %}
+{% block slider2 %}{% endblock %}
+{% block footer %}
+{% endblock %}
 <script src="{% static "jquery-2.1.1.js" %}"></script>
 <script src="{% static "script.js" %}"></script>
-<script src="{% static "lightbox.js" %}"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@ from django.db.models import permalink
 
 # Create your models here.
 
-class Images(models.Model):
+class Image(models.Model):
     image = models.FileField(upload_to='images')
     posted_on = models.DateTimeField(auto_now_add=True)
     caption = models.CharField(max_length=500)
@@ -24,4 +24,7 @@ class Category(models.Model):
     @permalink
     def get_absolute_url(self):
         return ('view_category', None, { 'slug': self.slug })
+
+    class Meta:
+        verbose_name_plural = "categories"
 

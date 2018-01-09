@@ -21,6 +21,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',views.home,name="home"),
     url(r'^gallery/',include('gallery.urls')),
+    url(r'^events/', include('calendarium.urls')),
+    url(r'^payment/',include('paypal.standard.ipn.urls')),
 ]
 from django.conf import settings
 from django.conf.urls.static import static

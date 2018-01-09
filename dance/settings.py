@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'gallery',
+    'filer',
+    'mptt',
+    'easy_thumbnails',
+    'calendarium',
+    'paypal.standard.ipn',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -123,3 +129,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+#django-paypal settings
+
+PAYPAL_TEST = True
