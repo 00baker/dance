@@ -15,21 +15,4 @@
                     {% endfor %}
                 </ul>
 {% endif %}
-    {% if videos %}
-                <ul>
-                {% for video in videos %}
-                    <span class="col-md-6">
-                    <span class="thumbnail">
-                    <video  id="vid1"
-                           class="video-js vjs-default-skin"
-                           controls autoplay width="550" height="auto"
-                           data-setup='{ "techOrder": ["youtube"],
-                           "sources": [{ "type":
-                           "video/youtube","src": "{{ video.video }}"}] }'>
-                    </video>
-                    </span>
-                    </span>
-                {% endfor %}
-                </ul>
-            {% endif %}
 {% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'gallery/base.html' %}
+{% load static %}
+{% block title %}Video{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class = "col-md-2">
+            <h2>Categories</h2>
+            {% if categories %}
+            <ul>
+                {% for category in categories %}
+                    <li style="text-align: left"><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <p>There are no posts.</p>
+            {% endif %}
+        </div>
+        <div class="col-md-8">
+            <h2>Videos</h2>
+    <div class = "row">
+        {% if videos %}
+                <ul>
+                {% for video in videos %}
+                    <span class="col-lg-3 col-md-4 col-xs-6">
+                    <span class="thumbnail">
+                    <video  id="vid1"
+                           class="video-js vjs-default-skin img-responsive"
+                           controls autoplay width="640" height="640"
+                           data-setup='{ "techOrder": ["youtube"],
+                           "sources": [{ "type":
+                           "video/youtube","src": "{{ video.video }}"}] }'>
+
+                    </video>
+                    </span>
+                    </span>
+                {% endfor %}
+                </ul>
+            {% endif %}
+
+    </div>
+        </div>
+
+{% endblock %}
