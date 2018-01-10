@@ -69,7 +69,8 @@
 		    <a href="{% url 'contact_us' %}">Contact Us</a>
 		  </div>
 
-
+            {% block head_title %}{% endblock %}
+        {% block title %}{% endblock %}
 		  {% block content %} {% endblock %}
 			<script src="{% static "jquery-2.1.1.js" %}"></script>
 			<script src="{% static "script.js" %}"></script>

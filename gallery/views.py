@@ -11,5 +11,5 @@ def category(request, slug):
     category = get_object_or_404(Category, slug=slug)
     return render_to_response('gallery/view_category.html', {
         'category': category,
-        'posts': Image.objects.filter(category=category)
+        'images': Image.objects.filter(category=category)
     })

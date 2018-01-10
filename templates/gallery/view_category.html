@@ -1,18 +1,18 @@
 {% extends 'gallery/base.html' %}
 {% block head_title %}Viewing category {{ category.title }}{% endblock %}
-{% block title %}
-		{{ category.title }}
+{% block title %}{{ category.title }}
 {% endblock %}
 
 {% block content %}
-    {% if images %}
-        <ul>
-        {% for image in images %}
-            <li><a href="{{ image.get_absolute_url }}"></a></li>
-            <img src="{{ image.image }}"/>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>There are no posts.</p>
-    {% endif %}
+{% if images %}
+                <ul>
+                    {% for image in images %}
+                        <span class="col-lg-3 col-md-4 col-xs-6">
+                            <span class="thumbnail">
+                                <a href="{{ image.image.url }}" data-lightbox="{{ image.category }}" data-title="{{ image.caption }}"><img src="{{ image.image.url }}"></a>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>There are no posts.</p>
+            {% endif %}
 {% endblock %}

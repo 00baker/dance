@@ -5,4 +5,4 @@ def home(request):
     return render(request,'home/index.html')
 
 def contact_us(request):
-	return render(request,'home/contactus.html')
+    return render(request,'home/contactus.html')
