@@ -1,96 +1,112 @@
 {% load static %}
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Learn Dance</title>
-		<meta name='keywords' content='Lear Dance'/>
-		<meta name='description' content='Learn Dance is the best institute to learn dance. We offer dance classes to People of all age group'/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="{% static "style.css" %}">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-		<link href="{% static "lightbox.css" %}" rel="stylesheet">
-	</head>
-	<body>
-		<div id="landing">
-		  <div class="header">
-		    <a href="{% url 'home' %}" class="logo">Learn Dance</a>
-		    <a href="#" class="button">Create Account</a>
-		   <!-- <a href="#" class="login">Login</a> -->
-		  </div>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static "img/logo1.png"  %}">
+    <title>Contact Cen4PAL</title> 
+    <meta name='keywords' content='Center for Performance and learning,Detrroit,USA'/> 
+    <meta name='description' content='Center for Performance Arts and Learning strives to bring people together through dance,music,arts and culture.'/> 
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Roboto+Slab:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/component.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/image-gallery.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/recommendation.css" %}" />
+    <script src="{% static "js/modernizr.custom.js" %}"></script>
 
-		  <div class="slider slider-1">
-		    <img class="ratio" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7" />
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+        <div class="topbar">
+            <h1 class="site-title"><a href="#">
+            <!-- Logo begin -->
+                <img src="{% static "img/logo1.png" %}" alt="Jupiter" class="logo-medium">
+            </a></h1>
+            <nav class="top-navigation" role="navigation">
+                <ul class="inline-list padded-list">
+                      <li><a href="{% url 'home' %}" class="icon ion-university">Home</a></li>
+                      <li><a href="#" class="icon ion-map">Event & Calendar</a></li>
+                      <li><a href="{% url 'gallery' %}" class="icon ion-chatbubbles">Gallery</a></li>
+                      <li><a href="#" class="icon ion-paper-airplane">Regester</a></li>
+                      <li><a href="{% url 'contact_us' %}" class="button button-red">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+      <div class="demo-1">
+        <main>
+          <div class="page-view">
+            <div class="project">
+              <div class="text">
+                <div class="container">
+                  <p style="color: white; text-align: center;">“Center for Performance Arts and Learning”</p> 
+                </div>  
+              </div>
+            </div>
+            <div class="project">
+              <div class="text">
+                <p style="color: white; text-align: center;">“Fall In Love With Dance”</p>
+              </div>
+            </div>
 
-		    <input class="slide" type="radio" name="slider-1" id="s-1-1" /><label for="s-1-1"></label>
-		    <div>
-		      <img src="{% static "music.jpeg" %}" />
-		      <div class="content">
-		        <h3> Center for Performance Arts and Learning </h3>
-		        <p>Bringing People together through Dance Arts and Culture.</p>
-		        <a href="{% url 'gallery' %}" class="button button-blue">Get Started</a>
-		      </div>
-		    </div>
+            <div class="project">
+              <div class="text">
+                <p style="color: white; text-align: center;">“Make us your Dance Partner”</p>
+              </div>
+            </div>
+            <div class="project">
+              <div class="text">
+                <p style="color: white; text-align: center;">“Bringing People together through Dance Arts and Culture”</p>
+              </div>
+            </div>
+            <div class="bullets">
+              <div class="arrow previous">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="208.3 352 4.2 6.4" style="enable-background:new 208.3 352 4.2 6.4;" xml:space="preserve">
+                  <polygon class="st0" points="212.1,357.3 211.5,358 208.7,355.1 211.5,352.3 212.1,353 209.9,355.1"></polygon>
+                </svg>
+              </div>
+              <div class="arrow next">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="208.3 352 4.2 6.4" style="enable-background:new 208.3 352 4.2 6.4;" xml:space="preserve">
+                  <polygon class="st0" points="212.1,357.3 211.5,358 208.7,355.1 211.5,352.3 212.1,353 209.9,355.1"></polygon>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </header>
+    	{% block content %} {% endblock %}
+    
+		  <footer class="site-footer" role="contentinfo">
+		      <ul class="inline-list">
+		          <li><a href="" class="icon ion-speakerphone">Blog</a></li>
+		          <li><a href="" class="icon ion-social-linkedin">LinkedIn</a></li>
+		          <li><a href="" class="icon ion-social-facebook">Facebook</a></li>
+		          <li><a href="" class="icon ion-social-twitter">Twitter</a></li>
+		          <li><a href="" class="icon ion-locked">Privacy</a></li>
+		      </ul>
+		  </footer>
 
-		    <input class="slide" type="radio" name="slider-1" id="s-1-2" /><label for="s-1-2"></label>
-		    <div>
-		      <img src="{% static "slide2.jpg" %}"/>
-		      <div class="content">
-		        <h3>Make us your Dance family</h3>
-		        <p></p>
-		        <a href="{% url 'gallery' %}" class="button button-orange">Get Started</a>
-		      </div>
-		    </div>
-
-		    <input class="slide" type="radio" name="slider-1" id="s-1-3" checked /><label for="s-1-3"></label>
-		    <div>
-		      <img src="{% static "dance6.jpg" %}" />
-		      <div class="content">
-		        <h3>Center for Performance Arts and Learning </h3>
-		        <p>Bringing People together through Dance Arts and Culture.</p>
-		        <a href="{% url 'gallery' %}" class="button button">Get Started</a>
-		      </div>
-		    </div>
-
-		  <style type="text/css">
-		      #landing .slider-1 img.ratio {padding:0 33%;}
-		      #landing .slider-1 .content {max-width:33%; margin:5% 0 0 18%;}
-		      #landing .slider-1 .content h3 {color:#fff; font-size:2.125em; font-weight:normal; margin:0 0 4%;}
-		      #landing .slider-1 .content p {color:#fff; font-size:1.1em; font-weight:normal;}
-		      #landing .slider-1 .button {position:absolute; bottom:17%; min-width:12.5em; font-size:.95em; font-weight:normal; border-width:.14em;}
-		    </style>
-		  </div>
-
-		  <div class="menu">
-		    <a href="{% url 'home' %}">Home</a>
-		    <a href="#">Create Account</a>
-		    <a href="#">Event & calendar</a>
-		    <a href="{% url 'gallery' %}">Gallery</a>
-		    <a href="{% url 'contact_us' %}">Contact Us</a>
-		  </div>
-
-            {% block head_title %}{% endblock %}
-        {% block title %}{% endblock %}
-		  {% block content %} {% endblock %}
-			<script src="{% static "jquery-2.1.1.js" %}"></script>
-			<script src="{% static "script.js" %}"></script>
-			<script src="{% static "lightbox.js" %}"></script>
-			<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		  <script src="{% static "js/zepto.min.js" %}"></script>
+		  <script src="{% static "js/demo.js" %}"></script>
+		  <script src="{% static "js/main-script.js" %}"></script>
+		  <script src="{% static "js/jquery-2.1.1.js" %}"></script>
+		  <script src="{% static "js/modernizr-custom.js" %}"></script>
+		  <script src="{% static "js/imagesloaded.pkgd.min.js" %}"></script>
+		  <script src="{% static "js/masonry.pkgd.min.js" %}"></script>
+		  <script src="{% static "js/classie.js" %}"></script>
+		  <script src="{% static "js/main.js" %}"></script>
 
 		  
-		  <div class="copyright">
-		    <span>&copy; 2018 Cen4PAL All rights reserved.</span>
-		    <a href="#">Terms of Use</a>
-		    <!--<a href="#">uscoolabs</a> -->
-		    <a href="#">Privacy Policy</a>
-		    <div class="social">
-		      <a href="#" class="fa fa-youtube-play"></a>
-		      <a href="#" class="fa fa-twitter"></a>
-		      <a href="https://www.facebook.com/Cen4PAL" class="fa fa-facebook"></a>
-		    </div>
-		  </div>
-		</div>
-		<script src="{% static "jquery-2.1.1.js" %}"></script>
-		<script src="{% static "script.js" %}"></script>
-	</body>
+		  <script src="js/scroll.js"></script>
+		  <script src="js/jquery.cbpQTRotator.min.js"></script>
+
+
+		  <script src="{% static "js/scroll.js" %}"></script>
+		  <script src="{% static "js/jquery.cbpQTRotator.min.js" %}"></script>
+	  </body>
 </html>
