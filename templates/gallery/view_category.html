@@ -4,15 +4,36 @@
 {% endblock %}
 
 {% block content %}
-{% if images %}
+      <div class="col-md-6">
+            <h2>Images</h2>
+            {% if images %}
                 <ul>
                     {% for image in images %}
-                        <span class="col-lg-3 col-md-4 col-xs-6">
+                        <span class="col-lg-6 col-md-6 col-xs-6">
                             <span class="thumbnail">
                                 <a href="{{ image.image.url }}" data-lightbox="{{ image.category }}" data-title="{{ image.caption }}"><img src="{{ image.image.url }}"></a>
+
                             </span>
                         </span>
                     {% endfor %}
                 </ul>
-{% endif %}
+            {% endif %}
+        </div>
+    </div>    <div class="col-md-6">
+            <h2>Videos</h2>
+    <div class = "row">
+        {% if videos %}
+                <ul>
+                {% for video in videos %}
+                    <div class="col-md-7">
+                    <div class="thumbnail">
+                          <video id="vid1" class="video-js vjs-default-skin" controls width="640" height="264" data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "{{ video.video }}"}] }'></video>
+                    </div>
+                    </div>
+                {% endfor %}
+                </ul>
+            {% endif %}
+
+    </div>
+        </div>
 {% endblock %}

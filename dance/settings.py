@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'calendarium',
     'paypal.standard.ipn',
+    'embed_video',
 ]
 
 MIDDLEWARE = [
