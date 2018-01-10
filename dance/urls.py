@@ -23,7 +23,6 @@ urlpatterns = [
     url(r'^contact_us',views.contact_us,name="contact_us"),
     url(r'^gallery/',include('gallery.urls')),
     url(r'^events/', include('calendarium.urls')),
-    url(r'^payment/',include('paypal.standard.ipn.urls')),
 ]
 from django.conf import settings
 from django.conf.urls.static import static

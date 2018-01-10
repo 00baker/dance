@@ -28,3 +28,12 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = "categories"
 
+class Video(models.Model):
+    title = models.CharField(max_length=200)
+    video = models.CharField(max_length=500)
+    category = models.ForeignKey('gallery.Category')
+
+    def __str__(self):
+        return self.title
+
+

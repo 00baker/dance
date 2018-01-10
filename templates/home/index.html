@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="shortcut icon" href="{% static "img/logo1.png"  %}">
-		<title>Cen4PAL</title> 
-		<meta name='keywords' content='Center for Performance and learning,Detrroit,USA'/> 
-		<meta name='description' content='Center for Performance Arts and Learning strives to bring people together through dance,music,arts and culture.'/> 
+		<title>Cen4PAL</title>
+		<meta name='keywords' content='Center for Performance and learning,Detrroit,USA'/>
+		<meta name='description' content='Center for Performance Arts and Learning strives to bring people together through dance,music,arts and culture.'/>
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Roboto+Slab:700' rel='stylesheet' type='text/css'>
@@ -15,34 +15,61 @@
 		<link rel="stylesheet" href="{% static "css/component.css" %}">
 		<link rel="stylesheet" type="text/css" href="{% static "css/image-gallery.css" %}" />
 		<link rel="stylesheet" type="text/css" href="{% static "css/recommendation.css" %}" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="{% static "js/modernizr.custom.js" %}"></script>
 
 	</head>
 	<body>
 		<header class="site-header" role="banner">
-		    <div class="topbar">
+           <!-- <div class="topbar">
 		        <h1 class="site-title"><a href="#">
-		        <!-- Logo begin -->
 		            <img src="{% static "img/logo1.png" %}" alt="Jupiter" class="logo-medium">
 		        </a></h1>
-		        <nav class="top-navigation" role="navigation">
-		            <ul class="inline-list padded-list">
+		        <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+		            <ul class="nav navbar-nav">
 	                    <li><a href="{% url 'home' %}" class="icon ion-university">Home</a></li>
-	                    <li><a href="#" class="icon ion-map">Event & Calendar</a></li>
+	                    <li><a href="{% url 'calendar_current_month' %}" class="icon ion-map">Event & Calendar</a></li>
 	                    <li><a href="{% url 'gallery' %}" class="icon ion-chatbubbles">Gallery</a></li>
 	                    <li><a href="#" class="icon ion-paper-airplane">Regester</a></li>
 	                    <li><a href="{% url 'contact_us' %}" class="button button-red">Contact Us</a></li>
 		            </ul>
+                    </div>
 		        </nav>
 		    </div>
+            -->
+           <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #ffffff">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <img src="{% static "img/logo1.png" %}" width="auto" height="50" >
+                    </div>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'calendar_current_month' %}">Event & Calendar</a></li>
+                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                        <li><a href="#">Register</a> </li>
+                        <a href="{% url 'contact_us' %}"><button class="btn btn-danger navbar-btn">Contact Us</button></a>
+                    </ul>
+                    </div>
+
+                </div>
+            </nav>
+
+
 			<div class="demo-1">
 				<main>
 					<div class="page-view">
 						<div class="project">
 							<div class="text">
 								<div class="container">
-									<p style="color: white; text-align: center;">“Center for Performance Arts and Learning”</p>	
-								</div>	
+									<p style="color: white; text-align: center;">“Center for Performance Arts and Learning”</p>
+								</div>
 							</div>
 						</div>
 						<div class="project">
@@ -86,7 +113,7 @@
 	    <section class="fixed-width highlighted-bg center-align" scroll_target="facilities">
 	        <h2>Center for Performance arts and Learning</h2>
 	        <div class="col fourth">
-	            <h3>Bringing People Together</h3>
+	            <h2>Bringing People Together</h2>
 	            <img src="{% static "img/dance1.png" %}" alt="" class="landing-icon" >
 	            <ul class="large-list">
 	            	<li class="icon ion-ios-star">Center for Performance Arts and Learning strives to bring people together through dance,music,arts and culture.</li>
@@ -94,27 +121,27 @@
 	        </div>
 
 	        <div class="col fourth">
-	            <h3>We want to be your Dance Family.</h3>
+	            <h2>We want to be your Dance Family.</h2>
 	            <img src="{% static "img/logo1.png" %}" alt="" class="landing-icon">
 	            <ul class="large-list">
 	            	<li class="icon ion-ios-star">Cen4PAL has provided a quality performing arts education for people of all ages and skill levels, in a friendly environment.</li>
-	             </ul>  
+	             </ul>
 	        </div>
 
 	        <div class="col fourth">
-	            <h3>Learn,Collaborate and Thrive</h3>
+	            <h2>Learn,Collaborate and Thrive</h2>
 	            <img src="{% static "img/dance2.jpg" %}" alt="" class="landing-icon">
 	            <ul class="large-list">
 	            	<li class="icon ion-ios-star">We here at Cen4PAL provide a center "A Room" to Learn,Reflect,Collaborate and Thrive .</li>
-	           	</ul>           
+	           	</ul>
 	        </div>
 
 	        <div class="col fourth">
-	            <h3>Unity In Diversity</h3>
+	            <h2>Unity In Diversity</h2>
 	            <img src="{% static "img/dan2.jpg" %}" alt="" class="landing-icon">
 	            <ul class="large-list">
 	           		<li class="icon ion-ios-star">We are dedicated to build a strong culture of acceptance and collaboration in diverse cultural communities .</li>
-	           </ul>  
+	           </ul>
 	        </div>
 	    </section>
 
@@ -138,15 +165,15 @@
 					<img src="{% static "img/Nandita.jpg" %}" alt="Nandita" />
 					<blockquote>
 	                    <p>We Strive to bring people together through dance,music,arts and culture.Creating and fostering an all-inclusive environment dedicated to building a strong culture of acceptance,empowerment and collaboration,spanning diverse cultural communities</p>
-						<footer>Nandita Bajaj 
-							<br> 
+						<footer>Nandita Bajaj
+							<br>
 							Director
 							<br>
 							Cen4PAL
 							</br>
 						</footer>
 					</blockquote>
-				</div>		
+				</div>
 			</div>
 		</section>
 	</main>
@@ -160,7 +187,7 @@
 	        <li><a href="" class="icon ion-locked">Privacy</a></li>
 	    </ul>
 	</footer>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="{% static "js/zepto.min.js" %}"></script>
 	<script src="{% static "js/demo.js" %}"></script>
 	<script src="{% static "js/main-script.js" %}"></script>
@@ -189,7 +216,7 @@
 				g.appendChild(circle);
 				previewEl.appendChild(dummy);
 			}
-			
+
 			new GridFx(document.querySelector('.grid'), {
 				onInit : function(instance) {
 					createCircleOverlay(instance.previewEl);
@@ -204,7 +231,7 @@
 						win = {width: document.documentElement.clientWidth, height: window.innerHeight},
 						SVGCircleGroupEl = instance.previewEl.querySelector('svg > g'),
 						SVGCircleEl = SVGCircleGroupEl.querySelector('circle');
-						
+
 					SVGCircleEl.setAttributeNS(null, 'r', Math.sqrt(Math.pow(instance.previewEl.offsetWidth,2) + Math.pow(instance.previewEl.offsetHeight,2)));
 					// set the transform for the SVG g node. This will animate the circle overlay. The origin of the circle depends on the position of the clicked item.
 					if( gridImgOffset.left + gridImg.offsetWidth/2 < win.width/2 ) {
@@ -217,8 +244,6 @@
 			});
 		})();
 	</script>
-	<script src="js/scroll.js"></script>
-	<script src="js/jquery.cbpQTRotator.min.js"></script>
 		<script>
 			$( function() {
 			$( '#cbp-qtrotator' ).cbpQTRotator();

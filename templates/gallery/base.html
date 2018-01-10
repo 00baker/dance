@@ -10,31 +10,43 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Roboto+Slab:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     <link rel="stylesheet" href="{% static "css/component.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "css/image-gallery.css" %}" />
     <link rel="stylesheet" type="text/css" href="{% static "css/recommendation.css" %}" />
+      <link rel="stylesheet" type="text/css" href="{% static "lightbox.css" %}" />
+    <link rel="stylesheet" href="{% static "video-js.min.css" %}">
     <script src="{% static "js/modernizr.custom.js" %}"></script>
+      {% block head_title %}{% endblock %}
+  {% block title %}{% endblock %}
 
   </head>
   <body>
     <header class="site-header" role="banner">
-        <div class="topbar">
-            <h1 class="site-title"><a href="#">
-            <!-- Logo begin -->
-                <img src="{% static "img/logo1.png" %}" alt="Jupiter" class="logo-medium">
-            </a></h1>
-            <nav class="top-navigation" role="navigation">
-                <ul class="inline-list padded-list">
-                      <li><a href="{% url 'home' %}" class="icon ion-university">Home</a></li>
-                      <li><a href="#" class="icon ion-map">Event & Calendar</a></li>
-                      <li><a href="{% url 'gallery' %}" class="icon ion-chatbubbles">Gallery</a></li>
-                      <li><a href="#" class="icon ion-paper-airplane">Regester</a></li>
-                      <li><a href="{% url 'contact_us' %}" class="button button-red">Contact Us</a></li>
-                </ul>
+                   <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #ffffff">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <img src="{% static "img/logo1.png" %}" width="auto" height="50" >
+                    </div>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'calendar_current_month' %}">Event & Calendar</a></li>
+                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                        <li><a href="#">Register</a> </li>
+                        <a href="{% url 'contact_us' %}"><button class="btn btn-danger navbar-btn">Contact Us</button></a>
+                    </ul>
+                    </div>
+
+                </div>
             </nav>
-        </div>
       <div class="demo-1">
         <main>
           <div class="page-view">
@@ -79,18 +91,9 @@
         </main>
       </div>
     </header>
-    	{% block content %} {% endblock %}
-    
-		  <footer class="site-footer" role="contentinfo">
-		      <ul class="inline-list">
-		          <li><a href="" class="icon ion-speakerphone">Blog</a></li>
-		          <li><a href="" class="icon ion-social-linkedin">LinkedIn</a></li>
-		          <li><a href="" class="icon ion-social-facebook">Facebook</a></li>
-		          <li><a href="" class="icon ion-social-twitter">Twitter</a></li>
-		          <li><a href="" class="icon ion-locked">Privacy</a></li>
-		      </ul>
-		  </footer>
 
+    	{% block content %} {% endblock %}
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		  <script src="{% static "js/zepto.min.js" %}"></script>
 		  <script src="{% static "js/demo.js" %}"></script>
 		  <script src="{% static "js/main-script.js" %}"></script>
@@ -100,13 +103,10 @@
 		  <script src="{% static "js/masonry.pkgd.min.js" %}"></script>
 		  <script src="{% static "js/classie.js" %}"></script>
 		  <script src="{% static "js/main.js" %}"></script>
-
-		  
-		  <script src="js/scroll.js"></script>
-		  <script src="js/jquery.cbpQTRotator.min.js"></script>
-
-
 		  <script src="{% static "js/scroll.js" %}"></script>
 		  <script src="{% static "js/jquery.cbpQTRotator.min.js" %}"></script>
+          <script src="{% static "lightbox.js" %}"></script>
+          <script src="{% static "video.min.js"%}"></script>
+          <script src="{% static "Youtube.min.js" %}"></script>
 	  </body>
 </html>
