@@ -32,6 +32,7 @@ class Video(models.Model):
     title = models.CharField(max_length=200)
     video = models.CharField(max_length=500)
     category = models.ForeignKey('gallery.Category')
+    posted_on = models.DateTimeField(auto_now_add=True)
 
 
     def __str__(self):

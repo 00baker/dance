@@ -19,33 +19,37 @@
       <link rel="stylesheet" type="text/css" href="{% static "lightbox.css" %}" />
     <link rel="stylesheet" href="{% static "video-js.min.css" %}">
     <script src="{% static "js/modernizr.custom.js" %}"></script>
-      {% block head_title %}{% endblock %}
-  {% block title %}{% endblock %}
 
   </head>
   <body>
     <header class="site-header" role="banner">
-                   <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #ffffff">
-                <div class="container-fluid">
+                   <nav class="navbar navbar-default navbar-static-top" style="background-color: #ffffff">
+                <div class="container">
                     <div class="navbar-header">
-                        <img src="{% static "img/logo1.png" %}" width="auto" height="50" >
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <img src="{% static "img/logo1.png" %}" width="auto" height="50">
                     </div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="{% url 'calendar_current_month' %}">Event & Calendar</a></li>
-                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                        <li><a href="{% url 'video' %}">Video</a></li>
-                        <li><a href="#">Register</a> </li>
-                        <a href="{% url 'contact_us' %}"><button class="btn btn-danger navbar-btn">Contact Us</button></a>
-                    </ul>
-                    </div>
-
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'calendar_current_month' %}">Event & Calendar</a></li>
+                            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Register <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">.</a></li>
+                                    <li><a href="#">.</a></li>
+                                    <li><a href="#">.</a></li>
+                                </ul>
+                            </li>
+                            <a href="{% url 'contact_us' %}"><button class="btn btn-danger navbar-btn">Contact Us</button></a>
+                        </ul>
+                    </div><!--/.nav-collapse -->
                 </div>
             </nav>
       <div class="demo-1">
@@ -94,20 +98,29 @@
     </header>
 
     	{% block content %} {% endblock %}
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		  <script src="{% static "js/zepto.min.js" %}"></script>
-		  <script src="{% static "js/demo.js" %}"></script>
-		  <script src="{% static "js/main-script.js" %}"></script>
-		  <script src="{% static "js/jquery-2.1.1.js" %}"></script>
-		  <script src="{% static "js/modernizr-custom.js" %}"></script>
-		  <script src="{% static "js/imagesloaded.pkgd.min.js" %}"></script>
-		  <script src="{% static "js/masonry.pkgd.min.js" %}"></script>
-		  <script src="{% static "js/classie.js" %}"></script>
-		  <script src="{% static "js/main.js" %}"></script>
-		  <script src="{% static "js/scroll.js" %}"></script>
-		  <script src="{% static "js/jquery.cbpQTRotator.min.js" %}"></script>
-          <script src="{% static "lightbox.js" %}"></script>
-          <script src="{% static "video.min.js"%}"></script>
-          <script src="{% static "Youtube.min.js" %}"></script>
-	  </body>
+
+          <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="{% static "js/modernizr.custom.js" %}"></script>
+	<script src="{% static "js/zepto.min.js" %}"></script>
+	<script src="{% static "js/demo.js" %}"></script>
+	<script src="{% static "js/main-script.js" %}"></script>
+	<script src="{% static "js/modernizr-custom.js" %}"></script>
+	<script src="{% static "js/imagesloaded.pkgd.min.js" %}"></script>
+	<script src="{% static "js/masonry.pkgd.min.js" %}"></script>
+	<script src="{% static "js/classie.js" %}"></script>
+	<script src="{% static "js/main.js" %}"></script>
+    <script>
+			$( function() {
+			$( '#cbp-qtrotator' ).cbpQTRotator();
+			} );
+    </script>
+
+	<script src="{% static "js/scroll.js" %}"></script>
+	<script src="{% static "js/jquery.cbpQTRotator.min.js" %}"></script>
+    <script> $(function(){ $('.nav-tabs a:first').tab('show'); }); </script> </body>
+	</body>
 </html>

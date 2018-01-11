@@ -7,7 +7,7 @@ from django.shortcuts import render
 def view_images(request):
     return render_to_response('gallery/index.html',{
         'categories': Category.objects.all(),
-        'images': Image.objects.all(),
+        'images': Image.objects.all().order_by("-posted_on"),
     })
 def category(request, slug):
     category = get_object_or_404(Category, slug=slug)
@@ -18,7 +18,7 @@ def category(request, slug):
     })
 def view_videos(requerst):
     return render_to_response('gallery/video.html',{
-        'videos': Video.objects.all(),
+        'videos': Video.objects.all().order_by("-posted_on"),
         'categories': Category.objects.all(),
     }
     )
