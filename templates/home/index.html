@@ -39,16 +39,17 @@
 		    </div>
             -->
            <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #ffffff">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="navbar-header">
-                        <img src="{% static "img/logo1.png" %}" width="auto" height="50" >
+                        <img src="{% static "img/logo1.png" %}" width="auto" height="50">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     </div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="myNavbar">
+                    <div id ="nabar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="{% url 'home' %}">Home</a></li>
                         <li><a href="{% url 'calendar_current_month' %}">Event & Calendar</a></li>
@@ -192,6 +193,7 @@
 	<script src="{% static "js/demo.js" %}"></script>
 	<script src="{% static "js/main-script.js" %}"></script>
 	<script src="{% static "js/jquery-2.1.1.js" %}"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
 	<script src="{% static "js/modernizr-custom.js" %}"></script>
 	<script src="{% static "js/imagesloaded.pkgd.min.js" %}"></script>
 	<script src="{% static "js/masonry.pkgd.min.js" %}"></script>
@@ -252,5 +254,6 @@
 
 	<script src="{% static "js/scroll.js" %}"></script>
 	<script src="{% static "js/jquery.cbpQTRotator.min.js" %}"></script>
+    <script> $(function(){ $('.nav-tabs a:first').tab('show'); }); </script> </body>
 	</body>
 </html>
