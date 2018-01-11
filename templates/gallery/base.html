@@ -19,6 +19,7 @@
       <link rel="stylesheet" type="text/css" href="{% static "lightbox.css" %}" />
     <link rel="stylesheet" href="{% static "video-js.min.css" %}">
     <script src="{% static "js/modernizr.custom.js" %}"></script>
+      <link rel="stylesheet" href="{% static 'lity.css' %}">
 
   </head>
   <body>
@@ -39,6 +40,7 @@
                             <li class="active"><a href="{% url 'home' %}">Home</a></li>
                             <li><a href="{% url 'calendar_current_month' %}">Event & Calendar</a></li>
                             <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                            <li><a href="{% url 'video' %}">Video</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Register <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -113,6 +115,10 @@
 	<script src="{% static "js/masonry.pkgd.min.js" %}"></script>
 	<script src="{% static "js/classie.js" %}"></script>
 	<script src="{% static "js/main.js" %}"></script>
+    <script src="{% static "lightbox.js" %}"></script>
+    <script src="{% static "Youtube.min.js" %}"></script>
+    <script src="{% static "video.min.js" %}"></script>
+    <script src="{% static "lity.js" %}"></script>
     <script>
 			$( function() {
 			$( '#cbp-qtrotator' ).cbpQTRotator();
