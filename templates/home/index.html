@@ -37,14 +37,9 @@
                             <li><a href="{% url 'calendar_current_month' %}">Event & Calendar</a></li>
                             <li><a href="{% url 'gallery' %}">Gallery</a></li>
                             <li><a href="{% url 'video' %}">Video</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Register <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">.</a></li>
-                                    <li><a href="#">.</a></li>
-                                    <li><a href="#">.</a></li>
-                                </ul>
-                            </li>
+                            {% for registration in registrations %}
+                            <li><a href="https://paypal.me/ctr4PAL/{{ registration.registration }}/">Register</a> </li>
+                            {% endfor %}
                             <a href="{% url 'contact_us' %}"><button class="btn btn-danger navbar-btn">Contact Us</button></a>
                         </ul>
                     </div><!--/.nav-collapse -->

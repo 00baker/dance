@@ -21,13 +21,15 @@
             <h2>Videos</h2>
     <div class = "row">
                 <ul>
-                {% for video in videos %}
-                    <div class="col-md-7">
-                    <div class="thumbnail">
-                          <video id="vid1" class="video-js vjs-default-skin" controls width="640" height="264" data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "{{ video.video }}"}] }'></video>
-                    </div>
-                    </div>
-                {% endfor %}
+                    {% for video in videos %}
+                        <span class="col-lg-6 col-md-6 col-xs-6">
+                            <span class="thumbnail">
+                                <a href="{{ video.video }}" data-lity>
+                                    <img src= "https://img.youtube.com/vi/{{ video.video_id }}/maxresdefault.jpg">
+                                </a>
+                            </span>
+                        </span>
+                    {% endfor %}
                 </ul>
     </div>
                 </div>
