@@ -7,8 +7,6 @@
         <h1 class="blog-title" style="border-bottom: 2px solid;">Videos of CentPAL</h1>
     </div>
 
-
-
     <main class="container">
         <div class="row">
             <div class="col-sm-8 blog-main">
@@ -42,23 +40,38 @@
                         </p>
                     </div>
                 </div>
-                <div class="sidebar-module">
+
+                <div class=" well">
+                <div>
                     <h4>
                         Categories
                     </h4>
+                    <ol style="list-style: none; font-family: serif; text-align: left; font-weight: 400; line-height: 1.5; box-sizing: border-box;">
                     {% if categories %}
-                    <div class="col-md-6">
+                    <div >
                         <ul>
                         {% for category in categories %}
-                            <li style="text-align: center;"><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+                            <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
                         {% endfor %}
                         </ul>
                     </div>
                     {% else %}
-                        <p>There are no posts.</p>
+                        <li>There are no posts.</li>
                     {% endif %}
+                    </ol>
+                </div>
                 </div>
             </aside>
         </div>
     </main>
+
+<footer class="site-footer" role="contentinfo">
+      <ul class="inline-list">
+          <li><a href="" class="icon ion-speakerphone">Blog</a></li>
+          <li><a href="" class="icon ion-social-linkedin">LinkedIn</a></li>
+          <li><a href="" class="icon ion-social-facebook">Facebook</a></li>
+          <li><a href="" class="icon ion-social-twitter">Twitter</a></li>
+          <li><a href="" class="icon ion-locked">Privacy</a></li>
+      </ul>
+  </footer>
 {% endblock %}
