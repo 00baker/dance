@@ -1,42 +1,64 @@
-{% extends 'gallery/base.html' %}
+{% extends 'gallery/base1.html' %}
 {% load static %}
 {% block title %}Video{% endblock %}
 
 {% block content %}
-
-    <div class="row">
-    <div class="col-md-6">
-            <h2>Categories</h2>
-            {% if categories %}
-                <div class="col-md-6">
-            <ul>
-                {% for category in categories %}
-                    <li style="text-align: left"><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
-                {% endfor %}
-            </ul>
-                </div>
-            {% else %}
-                <p>There are no posts.</p>
-            {% endif %}
-        </div>
-        <div class="col-md-6">
-            <h2>Videos</h2>
-    <div class = "row">
-        {% if videos %}
-                <ul>
-                {% for video in videos %}
-                    <span class="col-lg-6 col-md-6 col-xs-6">
-                    <span class="thumbnail">
-                    <a href="{{ video.video }}" data-lity>
-                        <img src= "https://img.youtube.com/vi/{{ video.video_id }}/maxresdefault.jpg">
-                    </a>
-                    </span>
-                    </span>
-                {% endfor %}
-                </ul>
-            {% endif %}
-
+    <div class="container" >
+        <h1 class="blog-title" style="border-bottom: 2px solid;">Videos of CentPAL</h1>
     </div>
-        </div>
 
+
+
+    <main class="container">
+        <div class="row">
+            <div class="col-sm-8 blog-main">
+                <div class="blog-post">
+                    <h2 class="blog-post-title" style="border-bottom: 1px solid">
+                        Latest Videos
+                    </h2>
+                </div>
+                <div class = "row">
+                    {% if videos %}
+                    <ul>
+                        {% for video in videos %}
+                        <span class="col-lg-6 col-md-6 col-xs-6">
+                            <span class="thumbnail">
+                                <a href="{{ video.video }}" data-lity>
+                                    <img src= "https://img.youtube.com/vi/{{ video.video_id }}/maxresdefault.jpg">
+                                </a>
+                            </span>
+                        </span>
+                        {% endfor %}
+                     </ul>
+                    {% endif %}
+                </div>
+            </div>
+            <aside class="col-sm-3 ml-sm-auto blog-sidebar" >
+                <div class="sidebar-module sidebar-module-inset" style="font-size: 1rem; font-weight: 400; line-height: 1.5; text-align: left; box-sizing: border-box; color: #555;" >
+                    <div class="well">
+                        <h3>About</h3>
+                        <p>
+                            hello everyone how are you. Here are few glimpse of our club.
+                        </p>
+                    </div>
+                </div>
+                <div class="sidebar-module">
+                    <h4>
+                        Categories
+                    </h4>
+                    {% if categories %}
+                    <div class="col-md-6">
+                        <ul>
+                        {% for category in categories %}
+                            <li style="text-align: center;"><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% else %}
+                        <p>There are no posts.</p>
+                    {% endif %}
+                </div>
+            </aside>
+        </div>
+    </main>
 {% endblock %}
