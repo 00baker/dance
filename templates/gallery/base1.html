@@ -1,0 +1,134 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static "img/logo1.png"  %}">
+    <title>Video Cen4PAL</title> 
+    <meta name='keywords' content='Center for Performance and learning,Detrroit,USA'/> 
+    <meta name='description' content='Center for Performance Arts and Learning strives to bring people together through dance,music,arts and culture.'/> 
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Roboto+Slab:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/component.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/image-gallery.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/recommendation.css" %}" />
+      <link rel="stylesheet" type="text/css" href="{% static "lightbox.css" %}" />
+    <link rel="stylesheet" href="{% static "video-js.min.css" %}">
+    <script src="{% static "js/modernizr.custom.js" %}"></script>
+      <link rel="stylesheet" href="{% static 'lity.css' %}">
+
+
+  
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+                   <nav class="navbar navbar-default navbar-static-top" style="background-color: #ffffff">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <img src="{% static "img/logo1.png" %}" width="auto" height="50">
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'calendar_current_month' %}">Event & Calendar</a></li>
+                            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                            <li class="active"><a href="{% url 'video' %}">Video</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Register <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">.</a></li>
+                                    <li><a href="#">.</a></li>
+                                    <li><a href="#">.</a></li>
+                                </ul>
+                            </li>
+                            <a href="{% url 'contact_us' %}"><button class="btn btn-danger navbar-btn">Contact Us</button></a>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+      <div class="demo-1">
+        <main>
+          <div class="page-view">
+            <div class="project">
+              <div class="text">
+                <div class="container">
+                  <p style="color: white; text-align: center;">“Center for Performance Arts and Learning”</p> 
+                </div>  
+              </div>
+            </div>
+            <div class="project">
+              <div class="text">
+                <p style="color: white; text-align: center;">“Fall In Love With Dance”</p>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="text">
+                <p style="color: white; text-align: center;">“Make us your Dance Partner”</p>
+              </div>
+            </div>
+            <div class="project">
+              <div class="text">
+                <p style="color: white; text-align: center;">“Bringing People together through Dance Arts and Culture”</p>
+              </div>
+            </div>
+            <div class="bullets">
+              <div class="arrow previous">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="208.3 352 4.2 6.4" style="enable-background:new 208.3 352 4.2 6.4;" xml:space="preserve">
+                  <polygon class="st0" points="212.1,357.3 211.5,358 208.7,355.1 211.5,352.3 212.1,353 209.9,355.1"></polygon>
+                </svg>
+              </div>
+              <div class="arrow next">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="208.3 352 4.2 6.4" style="enable-background:new 208.3 352 4.2 6.4;" xml:space="preserve">
+                  <polygon class="st0" points="212.1,357.3 211.5,358 208.7,355.1 211.5,352.3 212.1,353 209.9,355.1"></polygon>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </header>
+
+    	{% block content %} {% endblock %}
+
+          <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="{% static "js/modernizr.custom.js" %}"></script>
+	<script src="{% static "js/zepto.min.js" %}"></script>
+	<script src="{% static "js/demo.js" %}"></script>
+	<script src="{% static "js/main-script.js" %}"></script>
+	<script src="{% static "js/modernizr-custom.js" %}"></script>
+	<script src="{% static "js/imagesloaded.pkgd.min.js" %}"></script>
+	<script src="{% static "js/masonry.pkgd.min.js" %}"></script>
+	<script src="{% static "js/classie.js" %}"></script>
+	<script src="{% static "js/main.js" %}"></script>
+    <script src="{% static "lightbox.js" %}"></script>
+    <script src="{% static "Youtube.min.js" %}"></script>
+    <script src="{% static "video.min.js" %}"></script>
+    <script src="{% static "lity.js" %}"></script>
+    <script>
+			$( function() {
+			$( '#cbp-qtrotator' ).cbpQTRotator();
+			} );
+    </script>
+
+	<script src="{% static "js/scroll.js" %}"></script>
+	<script src="{% static "js/jquery.cbpQTRotator.min.js" %}"></script>
+    <script> $(function(){ $('.nav-tabs a:first').tab('show'); }); </script> </body>
+	</body>
+</html>
