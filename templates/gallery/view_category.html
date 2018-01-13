@@ -1,27 +1,46 @@
-{% extends 'gallery/base.html' %}
+{% extends 'gallery/base2.html' %}
 {% block content %}
-    <h2 style="text-align: center">{{ category.title }}</h2>
-      <div class="col-md-6">
-            <h2>Images</h2>
-            {% if images %}
-                <ul>
-                    {% for image in images %}
+    
+
+    <div class="container" >
+        <h2 class="blog-title" style="border-bottom: 2px solid;">{{ category.title }}</h2>
+    </div>
+
+    
+    <main class="container">
+        <div class="row">
+            <div class="col-sm-6 blog-main">
+                <div class="blog-post">
+                    <h2 class="blog-post-title" style="border-bottom: 1px solid">
+                        Latest Snaps
+                    </h2>
+                </div>
+                <div class = "row">
+                    {% if images %}
+                    <ul>
+                        {% for image in images %}
                         <span class="col-lg-6 col-md-6 col-xs-6">
                             <span class="thumbnail">
-                                <a href="{{ image.image.url }}" data-lightbox="{{ image.category }}" data-title="{{ image.caption }}"><img src="{{ image.image.url }}"></a>
-
+                                <a href="{{ image.image.url }}" data-lightbox="{{ image.category }}" data-title="{{ image.caption }}">
+                                    <img src="{{ image.image.url }}">
+                                </a>
                             </span>
                         </span>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        </div>
-        {% if videos %}
-                <div class="col-md-6">
-            <h2>Videos</h2>
-    <div class = "row">
-                <ul>
-                    {% for video in videos %}
+                        {% endfor %}
+                     </ul>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-sm-6 blog-main">
+                <div class="blog-post">
+                    <h2 class="blog-post-title" style="border-bottom: 1px solid">
+                        Latest Videos
+                    </h2>
+                </div>
+                <div class = "row">
+                    {% if videos %}
+                    <ul>
+                        {% for video in videos %}
                         <span class="col-lg-6 col-md-6 col-xs-6">
                             <span class="thumbnail">
                                 <a href="{{ video.video }}" data-lity>
@@ -29,9 +48,21 @@
                                 </a>
                             </span>
                         </span>
-                    {% endfor %}
-                </ul>
-    </div>
+                        {% endfor %}
+                     </ul>
+                    {% endif %}
                 </div>
-            {% endif %}
+            </div>
+        </div>
+    </main>
+
+<footer class="site-footer" role="contentinfo">
+      <ul class="inline-list">
+          <li><a href="" class="icon ion-speakerphone">Blog</a></li>
+          <li><a href="" class="icon ion-social-linkedin">LinkedIn</a></li>
+          <li><a href="" class="icon ion-social-facebook">Facebook</a></li>
+          <li><a href="" class="icon ion-social-twitter">Twitter</a></li>
+          <li><a href="" class="icon ion-locked">Privacy</a></li>
+      </ul>
+  </footer>
 {% endblock %}
