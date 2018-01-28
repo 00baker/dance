@@ -1,0 +1,300 @@
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="{% static "img/logo1.png"  %}">
+		<title>Cen4PAL</title>
+		<meta name='keywords' content='Center for Performance and learning,Detrroit,USA'/>
+		<meta name='description' content='Center for Performance Arts and Learning strives to bring people together through dance,music,arts and culture.'/>
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Roboto+Slab:700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+		<link rel="stylesheet" href="{% static "css/style.css" %}">
+		<link rel="stylesheet" href="{% static "css/component.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "css/image-gallery.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "css/recommendation.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-default navbar-fixed-top">
+			  	<div class="container-fluid">
+			    	<div class="navbar-header">
+			      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				        	<span class="sr-only">Toggle navigation</span>
+				        	<span class="icon-bar"></span>
+				        	<span class="icon-bar"></span>
+				        	<span class="icon-bar"></span>
+			      		</button>
+			      		<a href="{% url 'home' %}"><img class="img-responsive" src="{% static "img/logo1.png" %}" width="60px" height="60px"></a>
+			    	</div>
+    				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+      					<ul class="nav navbar-nav navbar-right">
+					        <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'calendar_current_month' %}">Event & Calendar</a></li>
+                            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                            <li><a href="{% url 'video' %}">Video</a></li>
+                            {% for registration in registrations %}
+                            <li><a href="https://paypal.me/ctr4PAL/{{ registration.registration }}/">Register</a> </li>
+                            {% endfor %}
+                            <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+					    </ul>
+    				</div><!-- /.navbar-collapse -->
+  				</div><!-- /.container-fluid -->
+			</nav>
+		</div>
+
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<div class="container main site-main">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	 			<!-- Indicators -->
+			  	<ol class="carousel-indicators">
+			    	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			    	<li data-target="#myCarousel" data-slide-to="1"></li>
+			    	<li data-target="#myCarousel" data-slide-to="2"></li>
+			    	<li data-target="#myCarousel" data-slide-to="3"></li>
+			    	<li data-target="#myCarousel" data-slide-to="4"></li>
+			    	<li data-target="#myCarousel" data-slide-to="5"></li>
+			    	<li data-target="#myCarousel" data-slide-to="6"></li>
+			    <!--	<li data-target="#myCarousel" data-slide-to="7"></li>
+			    	<li data-target="#myCarousel" data-slide-to="8"></li>
+			    	<li data-target="#myCarousel" data-slide-to="9"></li>-->
+			  	</ol>
+
+	  			<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active">
+					  <img src="{% static "img/img1.jpeg" %}" alt="Dance1" style="display: block; margin-left: auto; margin-right: auto;">
+					</div>
+
+					<div class="item">
+					  <img src="{% static "img/img2.jpeg" %}" alt="Dance2" style="display: block; margin-left: auto; margin-right: auto;">
+					</div>
+					
+					<div class="item">
+					  <img src="{% static "img/img3.jpeg" %}" alt="Dance3" style="display: block; margin-left: auto; margin-right: auto;">
+					</div>
+					
+					<div class="item">
+					  <img src="{% static "img/img4.jpeg" %}" alt="Dance4" style="display: block; margin-left: auto; margin-right: auto;">
+					</div>
+					
+					<div class="item">
+					  <img src="{% static "img/img5.jpeg" %}" alt="Dance5" style="display: block; margin-left: auto; margin-right: auto;">
+					</div>
+
+					<div class="item">
+					  <img src="{% static "img/img6.jpeg" %}" alt="Dance6" style="display: block; margin-left: auto; margin-right: auto;">
+					</div>
+
+					<div class="item">
+					  <img src="{% static "img/img7.jpeg" %}" alt="Dance7" style="display: block; margin-left: auto; margin-right: auto;">
+					</div>
+
+				<!--	<div class="item">
+					  <img src="{% static "img/img8.jpeg" %}" alt="Dance8" style="display: block; margin-left: auto; margin-right: auto;">
+					</div>
+
+					<div class="item">
+					  <img src="{% static "img/img9.jpeg" %}" alt="Dance9" style="display: block; margin-left: auto; margin-right: auto;">
+					</div>
+
+					<div class="item">
+					  <img src="{% static "img/img10.jpeg" %}" alt="Dance10" style="display: block; margin-left: auto; margin-right: auto;">
+					</div> -->
+
+				</div>
+
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left"></span>
+				    <span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right"></span>
+				    <span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+
+		<br>
+
+		<main role="main" class="site-main">
+
+		<div class="container">
+	    <section class="fixed-width highlighted-bg center-align" scroll_target="facilities">
+	        <h2><u style="color: red;">Center for Performance arts and Learning</u></h2>
+	        <div class="col fourth">
+	            <h2>Bringing People Together</h2>
+	            <img width="100%" src="{% static "img/dance1.png" %}" alt="" class="landing-icon" >
+	            <ul class="large-list">
+	            	<li class="icon ion-ios-star">Center for Performance Arts and Learning strives to bring people together through dance,music,arts and culture.</li>
+	            </ul>
+	        </div>
+
+	        <div class="col fourth">
+	            <h2>we want to be your partner in learning.</h2>
+	            <img src="{% static "img/logo1.png" %}" alt="" class="landing-icon">
+	            <ul class="large-list">
+	            	<li class="icon ion-ios-star">Cen4PAL has provided a quality performing arts education for people of all ages and skill levels, in a friendly environment.</li>
+	             </ul>
+	        </div>
+
+	        <div class="col fourth">
+	            <h2>Learn,Collaborate and Thrive</h2>
+	            <img src="{% static "img/dance2.jpg" %}" alt="" class="landing-icon">
+	            <ul class="large-list">
+	            	<li class="icon ion-ios-star">We here at Cen4PAL provide a center "A Room" to Learn,Reflect,Collaborate and Thrive .</li>
+	           	</ul>
+	        </div>
+
+	        <div class="col fourth">
+	            <h2>Unity In Diversity</h2>
+	            <img src="{% static "img/dan2.jpg" %}" alt="" class="landing-icon">
+	            <ul class="large-list">
+	           		<li class="icon ion-ios-star">We are dedicated to build a strong culture of acceptance and collaboration in diverse cultural communities .</li>
+	           </ul>
+	        </div>
+	    </section>
+	    </div>
+
+
+	    <div class="container">
+	    <section class="fixed-width center-align">
+	        <h2><u style="color: red;">Why you should join us:</u></h2>
+
+	        <ul class="large-list">
+	            <li class="icon ion-ribbon-b">We are fueled by a passion for sharing our talents.</li>
+	            <li class="icon ion-ribbon-b">Supported by an experienced group of instructors.</li>
+	            <li class="icon ion-ribbon-b">Our goal is to help you explore your potentia.</li>
+	            <li class="icon ion-ribbon-b">Holistic approach to arts education the "whole" individual.</li>
+	        </ul>
+
+	        <a href="{% url 'contact_us' %}" class="button button-yellow">Contact Us</a>
+	    </section>
+	    </div>
+
+	    <div class="container">
+		<section class="fixed-width highlighted-bg">
+		    <h2><u style="color: red;">Our Mission</u></h2>
+			<div id="cbp-qtrotator" class="cbp-qtrotator">
+				<div class="cbp-qtcontent">
+					<img src="{% static "img/Nandita.jpg" %}" alt="Nandita" style="width: 180px" />
+				<!--	<blockquote>  -->
+	                    <h4 style="color: blue">Our story began with a small group of dancers who were very open minded an were open to learning and trying various styles. The more we explored the avenues arts and cultures had to offer the more we realized that people need a secure place to be themselves. A judgment free zone. 
+	                    <!--We Strive to bring people together through dance,music,arts and culture.Creating and fostering an all-inclusive environment dedicated to building a strong culture of acceptance,empowerment and collaboration,spanning diverse cultural communities--></h4>
+						<footer>Nandita Bajaj
+							<br>
+							Director
+							<br>
+							Cen4PAL
+							</br>
+						</footer>
+					<!--</blockquote>-->
+				</div>
+			</div>
+		</section>
+		</div>
+
+		<br>
+
+		<div class="container">
+			<section class="fixed-width highlighted-bg">
+				<h2><u style="color: red;">Meet our Staff</u></h2>
+
+			</section>
+		</div>
+	</main>
+
+	<br>
+
+	<footer class="site-footer" role="contentinfo">
+	    <ul class="inline-list">
+	        <li><a href="https://www.linkedin.com/in/nandita-bajaj-b3a5b81" class="icon ion-social-linkedin" target="_blank">LinkedIn</a></li>
+	        <li><a href="https://www.facebook.com/Cen4PAL" class="icon ion-social-facebook" target="_blank">Facebook</a></li>
+	        <li><a href="https://www.instagram.com/cen.4.performartsnlearning/" class="icon ion-social-instagram" target="_blank">Instagram</a></li>
+	        <li><a href="https://twitter.com/Cen4PAL" class="icon ion-social-twitter" target="_blank">Twitter</a></li>
+	        <li><a href="http://www.novichamber.com" class="icon ion-earth" target="_blank">Chamber of Commerce</a></li>
+	    </ul>
+	</footer>
+
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="{% static "js/modernizr.custom.js" %}"></script>
+	<script src="{% static "js/zepto.min.js" %}"></script>
+	<script src="{% static "js/demo.js" %}"></script>
+	<script src="{% static "js/main-script.js" %}"></script>
+	<script src="{% static "js/modernizr-custom.js" %}"></script>
+	<script src="{% static "js/imagesloaded.pkgd.min.js" %}"></script>
+	<script src="{% static "js/masonry.pkgd.min.js" %}"></script>
+	<script src="{% static "js/classie.js" %}"></script>
+	<script src="{% static "js/main.js" %}"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script>
+		(function() {
+			// create SVG circle overlay and append it to the preview element
+			function createCircleOverlay(previewEl) {
+				var dummy = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+				dummy.setAttributeNS(null, 'version', '1.1');
+				dummy.setAttributeNS(null, 'width', '100%');
+				dummy.setAttributeNS(null, 'height', '100%');
+				dummy.setAttributeNS(null, 'class', 'overlay');
+				var g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+				var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+				circle.setAttributeNS(null, 'cx', 0);
+				circle.setAttributeNS(null, 'cy', 0);
+				circle.setAttributeNS(null, 'r', Math.sqrt(Math.pow(previewEl.offsetWidth,2) + Math.pow(previewEl.offsetHeight,2)));
+				dummy.appendChild(g);
+				g.appendChild(circle);
+				previewEl.appendChild(dummy);
+			}
+
+			new GridFx(document.querySelector('.grid'), {
+				onInit : function(instance) {
+					createCircleOverlay(instance.previewEl);
+				},
+				onResize : function(instance) {
+					instance.previewEl.querySelector('svg circle').setAttributeNS(null, 'r', Math.sqrt(Math.pow(instance.previewEl.offsetWidth,2) + Math.pow(instance.previewEl.offsetHeight,2)));
+				},
+				onOpenItem : function(instance, item) {
+					// item's image
+					var gridImg = item.querySelector('img'),
+						gridImgOffset = gridImg.getBoundingClientRect(),
+						win = {width: document.documentElement.clientWidth, height: window.innerHeight},
+						SVGCircleGroupEl = instance.previewEl.querySelector('svg > g'),
+						SVGCircleEl = SVGCircleGroupEl.querySelector('circle');
+
+					SVGCircleEl.setAttributeNS(null, 'r', Math.sqrt(Math.pow(instance.previewEl.offsetWidth,2) + Math.pow(instance.previewEl.offsetHeight,2)));
+					// set the transform for the SVG g node. This will animate the circle overlay. The origin of the circle depends on the position of the clicked item.
+					if( gridImgOffset.left + gridImg.offsetWidth/2 < win.width/2 ) {
+						SVGCircleGroupEl.setAttributeNS(null, 'transform', 'translate(' + win.width + ', ' + (gridImgOffset.top + gridImg.offsetHeight/2 < win.height/2 ? win.height : 0) + ')');
+					}
+					else {
+						SVGCircleGroupEl.setAttributeNS(null, 'transform', 'translate(0, ' + (gridImgOffset.top + gridImg.offsetHeight/2 < win.height/2 ? win.height : 0) + ')');
+					}
+				}
+			});
+		})();
+	</script>
+		<script>
+			$( function() {
+			$( '#cbp-qtrotator' ).cbpQTRotator();
+			} );
+		</script>
+
+	<script src="{% static "js/scroll.js" %}"></script>
+	<script src="{% static "js/jquery.cbpQTRotator.min.js" %}"></script>
+    <script> $(function(){ $('.nav-tabs a:first').tab('show'); }); </script> </body>
+	</body>
+</html>

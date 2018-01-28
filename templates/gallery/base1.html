@@ -1,0 +1,166 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static "img/logo1.png"  %}">
+    <title>Video Cen4PAL</title> 
+    <meta name='keywords' content='Center for Performance and learning,Detrroit,USA'/> 
+    <meta name='description' content='Center for Performance Arts and Learning strives to bring people together through dance,music,arts and culture.'/> 
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Roboto+Slab:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/component.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/image-gallery.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/recommendation.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "lightbox.css" %}" />
+    <link rel="stylesheet" href="{% static "video-js.min.css" %}">
+    <script src="{% static "js/modernizr.custom.js" %}"></script>
+    <link rel="stylesheet" href="{% static "lity.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a href="{% url 'home' %}"><img class="img-responsive" src="{% static "img/logo1.png" %}" width="60px" height="60px"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'calendar_current_month' %}">Event & Calendar</a></li>
+                            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                            <li class="active"><a href="{% url 'video' %}">Video</a></li>
+                            {% for registration in registrations %}
+                            <li><a href="https://paypal.me/ctr4PAL/{{ registration.registration }}/">Register</a> </li>
+                            {% endfor %}
+                            <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container main site-main">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+          <!--  <li data-target="#myCarousel" data-slide-to="7"></li>
+            <li data-target="#myCarousel" data-slide-to="8"></li>
+            <li data-target="#myCarousel" data-slide-to="9"></li>-->
+          </ol>
+
+          <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="{% static "img/img1.jpeg" %}" alt="Dance1" style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+
+          <div class="item">
+            <img src="{% static "img/img2.jpeg" %}" alt="Dance2" style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+          
+          <div class="item">
+            <img src="{% static "img/img3.jpeg" %}" alt="Dance3" style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+          
+          <div class="item">
+            <img src="{% static "img/img4.jpeg" %}" alt="Dance4" style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+          
+          <div class="item">
+            <img src="{% static "img/img5.jpeg" %}" alt="Dance5" style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+
+          <div class="item">
+            <img src="{% static "img/img6.jpeg" %}" alt="Dance6" style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+
+          <div class="item">
+            <img src="{% static "img/img7.jpeg" %}" alt="Dance7" style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+
+        <!--  <div class="item">
+            <img src="{% static "img/img8.jpeg" %}" alt="Dance8" style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+
+          <div class="item">
+            <img src="{% static "img/img9.jpeg" %}" alt="Dance9" style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+
+          <div class="item">
+            <img src="{% static "img/img10.jpeg" %}" alt="Dance10" style="display: block; margin-left: auto; margin-right: auto;">
+          </div> -->
+
+        </div>
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <br>
+
+
+    	{% block content %} {% endblock %}
+
+          <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="{% static "js/modernizr.custom.js" %}"></script>
+	<script src="{% static "js/zepto.min.js" %}"></script>
+	<script src="{% static "js/demo.js" %}"></script>
+	<script src="{% static "js/main-script.js" %}"></script>
+	<script src="{% static "js/modernizr-custom.js" %}"></script>
+	<script src="{% static "js/imagesloaded.pkgd.min.js" %}"></script>
+	<script src="{% static "js/masonry.pkgd.min.js" %}"></script>
+	<script src="{% static "js/classie.js" %}"></script>
+	<script src="{% static "js/main.js" %}"></script>
+    <script src="{% static "lightbox.js" %}"></script>
+    <script src="{% static "Youtube.min.js" %}"></script>
+    <script src="{% static "video.min.js" %}"></script>
+    <script src="{% static "lity.js" %}"></script>
+    <script>
+			$( function() {
+			$( '#cbp-qtrotator' ).cbpQTRotator();
+			} );
+    </script>
+
+	<!--<script src="{% static "js/scroll.js" %}"></script>
+	<script src="{% static "js/jquery.cbpQTRotator.min.js" %}"></script>-->
+    <script> $(function(){ $('.nav-tabs a:first').tab('show'); }); </script> </body>
+	</body>
+</html>
